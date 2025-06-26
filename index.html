@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Franko Admin</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+    }
+    #toolbar {
+      display: flex;
+      padding: 10px;
+      background: #eee;
+    }
+    button {
+      margin-right: 10px;
+    }
+    webview {
+      width: 100%;
+      height: calc(100% - 50px);
+    }
+  </style>
+</head>
+<body>
+  <div id="toolbar">
+    <button id="back">⬅ Back</button>
+    <button id="forward">➡ Forward</button>
+    <button id="reload">🔄 Reload</button>
+  </div>
+
+  <webview id="webview" src="https://www.frankotrading.com/admin/login" allowpopups></webview>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
+<script>
+  const webview = document.getElementById('webview');
+  const backButton = document.getElementById('back');
+  const forwardButton = document.getElementById('forward');
+  const reloadButton = document.getElementById('reload');
+
+  backButton.addEventListener('click', () => {
+    if (webview.canGoBack()) {
+      webview.goBack();
+    }
+  });
+
+  forwardButton.addEventListener('click', () => {
+    if (webview.canGoForward()) {
+      webview.goForward();
+    }
+  });
+
+  reloadButton.addEventListener('click', () => {
+    webview.reload();
+  });
