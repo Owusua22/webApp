@@ -35,13 +35,10 @@
       "target": "AppImage",
       "icon": "assets/icon.png"
     },
-    "build": {
-      "publish": {
-        "provider": "github",
-        "owner": "your-github-username",
-        "repo": "your-repo-name"
-      }
+    "publish": {
+      "provider": "github",
+      "owner": "Owusua22",
+      "repo": "webApp"
     }
-   
   }
 }
