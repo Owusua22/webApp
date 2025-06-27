@@ -34,7 +34,12 @@
     "linux": {
       "target": "AppImage",
       "icon": "assets/icon.png"
-    }
+    },
+    "publish": {
+    "provider": "github",
+    "owner": "Owusua22",
+    "repo": "webApp"
+  }
    
   }
 }
