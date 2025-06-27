@@ -25,7 +25,7 @@ jobs:
         run: npm run build
 
       - name: Upload Windows Installer
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: franko-admin-windows-installer
           path: |
