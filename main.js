@@ -20,7 +20,7 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
-  console.log('🚀 App is working');
+  console.log('🚀 App is working correctly');
   createWindow();
 
   // Trigger update check
